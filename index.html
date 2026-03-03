@@ -80,8 +80,74 @@
       font-size: 15px;
       cursor: pointer;
     }
+/* ── Section services ── */
+#services {
+  padding: 80px 60px;
+  background-color: #F2E0D8;
+  text-align: center;
+}
 
-  </style>
+#services h2 {
+  font-size: 42px;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+.sous-titre {
+  color: #8A7570;
+  font-size: 15px;
+  margin-bottom: 50px;
+}
+
+.services-grid {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: white;
+  border-radius: 20px;
+  padding: 36px 28px;
+  width: 260px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+}
+
+.service-emoji {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #2C1F1A;
+}
+
+.service-card p {
+  font-size: 13px;
+  color: #8A7570;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.prix {
+  font-size: 22px;
+  font-weight: bold;
+  color: #D4897A;
+  margin-bottom: 6px;
+}
+
+.duree {
+  font-size: 12px;
+  color: #8A7570;
+}  </style>
 </head>
 
 <body>
@@ -95,10 +161,44 @@
   <!-- LA PAGE D'ACCUEIL -->
   <section>
     <h1>Ta perruque mérite<br>le <span>meilleur soin</span></h1>
-    <p>Premier pressing spécialisé perruques à Bingerville, Abidjan. Collecte et livraison à domicile.</p>
+    <p>Premier pressing spécialisé pour perruques. Collecte et livraison à domicile.</p>
     <button>Réserver maintenant →</button>
   </section>
+<!-- LES SERVICES -->
+<section id="services">
 
+  <h2>Nos services</h2>
+  <p class="sous-titre">Des soins professionnels pour ta perruque</p>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-emoji">🚿</div>
+      <h3>Lavage & Séchage</h3>
+      <p>Shampoing doux + séchage professionnel.</p>
+      <div class="prix">3 000 FCFA</div>
+      <div class="duree">⏱ 45 min</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-emoji">💧</div>
+      <h3>Hydratation & Soin</h3>
+      <p>Masque nourrissant + steamer capillaire professionnel.</p>
+      <div class="prix">5 500 FCFA</div>
+      <div class="duree">⏱ 60 min</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-emoji">✨</div>
+      <h3>Pack Complet Signature</h3>
+      <p>Lavage + Hydratation + Coiffage + soin huile brillance. Resultat garanti.</p>
+      <div class="prix">7 500 FCFA</div>
+      <div class="duree">⏱ 2h15 · ⭐ Populaire</div>
+    </div>
+
+  </div>
+
+</section>
 </body>
 
 </html>
