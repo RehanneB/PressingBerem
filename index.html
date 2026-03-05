@@ -4,18 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <title>PressingBerem</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
 
-    /* ── Les couleurs du site ── */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       background-color: #FAF6F0;
-      font-family: 'Jost', sans-serif;    
+      font-family: 'Jost', sans-serif;
       color: #2C1F1A;
-      margin: 0;
-      padding: 0;
     }
 
-    /* ── La navigation ── */
+    /* ── NAVIGATION ── */
     nav {
       background-color: #FAF6F0;
       padding: 20px 60px;
@@ -24,48 +24,38 @@
       justify-content: space-between;
       align-items: center;
     }
-
-    nav p {
+    .nav-logo {
       font-size: 22px;
       font-weight: bold;
       color: #2C1F1A;
-      margin: 0;
     }
-
-    nav p span {
-      color: #D4897A;
-    }
-
-    nav button {
+    .nav-logo span { color: #D4897A; }
+    .nav-btn {
       background-color: #D4897A;
       color: white;
       border: none;
       padding: 12px 28px;
       border-radius: 30px;
       font-size: 14px;
+      font-family: 'Jost', sans-serif;
       cursor: pointer;
     }
 
-    /* ── La section héro ── */
-    section {
-      padding: 80px 60px;
-    }
+    /* ── HERO ── */
     #hero {
-  padding: 100px 60px;
-}
-    h1 {
+      padding: 100px 60px;
+    }
+    #hero h1 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 64px;
       font-weight: 300;
       line-height: 1.1;
       margin-bottom: 20px;
     }
-
-    h1 span {
+    #hero h1 span {
       color: #D4897A;
       font-style: italic;
     }
-
     #hero p {
       font-size: 16px;
       color: #8A7570;
@@ -73,237 +63,202 @@
       max-width: 500px;
       line-height: 1.8;
     }
-
-    section button {
+    #hero button {
       background-color: #D4897A;
       color: white;
       border: none;
       padding: 16px 36px;
       border-radius: 30px;
       font-size: 15px;
+      font-family: 'Jost', sans-serif;
       cursor: pointer;
     }
-/* ── Section services ── */
-#services {
-  padding: 80px 60px;
-  background-color: #F2E0D8;
-  text-align: center;
-}
 
-#services h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 42px;
-  font-weight: 300;
-  margin-bottom: 8px;
-}
+    /* ── SERVICES ── */
+    #services {
+      padding: 80px 60px;
+      background-color: #F2E0D8;
+      text-align: center;
+    }
+    #services h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+    .sous-titre {
+      color: #8A7570;
+      font-size: 15px;
+      margin-bottom: 50px;
+    }
+    .services-grid {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .service-card {
+      background: white;
+      border-radius: 20px;
+      padding: 36px 28px;
+      width: 260px;
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .service-card:hover { transform: translateY(-6px); }
+    .service-emoji { font-size: 40px; margin-bottom: 16px; }
+    .service-card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #2C1F1A;
+    }
+    .service-card p {
+      font-size: 13px;
+      color: #8A7570;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .prix {
+      font-size: 22px;
+      font-weight: bold;
+      color: #D4897A;
+      margin-bottom: 6px;
+    }
+    .duree { font-size: 12px; color: #8A7570; }
 
-.sous-titre {
-  color: #8A7570;
-  font-size: 15px;
-  margin-bottom: 50px;
-}
+    /* ── LIVRAISON ── */
+    #livraison {
+      padding: 80px 60px;
+      text-align: center;
+    }
+    #livraison h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 42px;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+    .livraison-grid {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    .livraison-card {
+      background: white;
+      border-radius: 20px;
+      padding: 32px 24px;
+      width: 220px;
+      text-align: center;
+      border: 1.5px solid rgba(0,0,0,0.06);
+      transition: transform 0.2s;
+    }
+    .livraison-card:hover {
+      transform: translateY(-6px);
+      border-color: #D4897A;
+    }
+    .livraison-card.highlight {
+      border-color: #D4897A;
+      background: #FFF8F6;
+    }
+    .livraison-emoji { font-size: 36px; margin-bottom: 14px; }
+    .livraison-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: #2C1F1A;
+      margin-bottom: 8px;
+    }
+    .livraison-card p {
+      font-size: 12px;
+      color: #8A7570;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .livraison-prix {
+      font-size: 18px;
+      font-weight: 600;
+      color: #D4897A;
+    }
+    .livraison-prix.gratuit { color: #2E7D5A; }
 
-.services-grid {
-  display: flex;
-  gap: 24px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.service-card {
-  background: white;
-  border-radius: 20px;
-  padding: 36px 28px;
-  width: 260px;
-  text-align: center;
-  transition: transform 0.2s;
-}
-
-.service-card:hover {
-  transform: translateY(-6px);
-}
-
-.service-emoji {
-  font-size: 40px;
-  margin-bottom: 16px;
-}
-
-.service-card h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #2C1F1A;
-}
-
-.service-card p {
-  font-size: 13px;
-  color: #8A7570;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.prix {
-  font-size: 22px;
-  font-weight: bold;
-  color: #D4897A;
-  margin-bottom: 6px;
-}
-
-.duree {
-  font-size: 12px;
-  color: #8A7570;
-  /* ── Section livraison ── */
-#livraison {
-  padding: 80px 60px;
-  text-align: center;
-}
-
-.livraison-grid {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 40px;
-}
-
-.livraison-card {
-  background: white;
-  border-radius: 20px;
-  padding: 32px 24px;
-  width: 220px;
-  text-align: center;
-  border: 1.5px solid rgba(0,0,0,0.06);
-  transition: transform 0.2s;
-}
-
-.livraison-card:hover {
-  transform: translateY(-6px);
-  border-color: #D4897A;
-}
-
-.livraison-card.highlight {
-  border-color: #D4897A;
-  background: #FFF8F6;
-}
-
-.livraison-emoji {
-  font-size: 36px;
-  margin-bottom: 14px;
-}
-
-.livraison-card h3 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
-  color: #2C1F1A;
-  margin-bottom: 8px;
-}
-
-.livraison-card p {
-  font-size: 12px;
-  color: #8A7570;
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-
-.livraison-prix {
-  font-size: 18px;
-  font-weight: 600;
-  color: #D4897A;
-}
-
-.livraison-prix.gratuit {
-  color: #2E7D5A;
-}
   </style>
 </head>
 
 <body>
 
-  <!-- LA NAVIGATION -->
+  <!-- NAVIGATION -->
   <nav>
-    <p>Pressing<span>Berem</span></p>
-    <button>Prendre RDV</button>
+    <div class="nav-logo">Pressing<span>Berem</span></div>
+    <button class="nav-btn">Prendre RDV</button>
   </nav>
 
-  <!-- LA PAGE D'ACCUEIL -->
+  <!-- HERO -->
   <section id="hero">
     <h1>Ta perruque mérite<br>le <span>meilleur soin</span></h1>
-    <p>Premier pressing spécialisé pour perruques. Collecte et livraison à domicile.</p>
+    <p>Premier pressing spécialisé de perruques .Collecte et livraison à domicile.</p>
     <button>Réserver maintenant →</button>
   </section>
-  <!-- LA LIVRAISON -->
-<section id="livraison">
 
-  <h2>Collecte & Livraison</h2>
-  <p class="sous-titre">Tu ne bouges pas, on s'occupe de tout</p>
-
-  <div class="livraison-grid">
-
-    <div class="livraison-card">
-      <div class="livraison-emoji">🏪</div>
-      <h3>Click & Collect</h3>
-      <p>Tu déposes et récupères ta perruque directement au local.</p>
-      <div class="livraison-prix gratuit">Gratuit</div>
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>Nos services</h2>
+    <p class="sous-titre">Des soins professionnels pour ta perruque</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-emoji">🚿</div>
+        <h3>Lavage & Séchage</h3>
+        <p>Shampoing doux + séchage professionnel .</p>
+        <div class="prix">3 000 FCFA</div>
+        <div class="duree">⏱ 45 min</div>
+      </div>
+      <div class="service-card">
+        <div class="service-emoji">💧</div>
+        <h3>Hydratation & Soin</h3>
+        <p>Masque nourrissant + steamer capillaire professionnel.</p>
+        <div class="prix">5 500 FCFA</div>
+        <div class="duree">⏱ 60 min</div>
+      </div>
+      <div class="service-card">
+        <div class="service-emoji">✨</div>
+        <h3>Pack Complet Signature</h3>
+        <p>Lavage + Hydratation + Coiffage + soin huile brillance. Resultat garanti.</p>
+        <div class="prix">7 500 FCFA</div>
+        <div class="duree">⏱ 2h15 · ⭐ Populaire</div>
+        </div>
     </div>
+  </section>
 
-    <div class="livraison-card">
-      <div class="livraison-emoji">🏍️</div>
-      <h3>Collecte domicile</h3>
-      <p>On vient chercher ta perruque chez toi entre 7h et 10h.</p>
-      <div class="livraison-prix">+1 500 FCFA</div>
+  <!-- LIVRAISON -->
+  <section id="livraison">
+    <h2>Collecte & Livraison</h2>
+    <p class="sous-titre">Tu ne bouges pas, on s'occupe de tout</p>
+    <div class="livraison-grid">
+      <div class="livraison-card">
+        <div class="livraison-emoji">🏪</div>
+        <h3>Click & Collect</h3>
+        <p>Tu déposes et récupères ta perruque directement au local.</p>
+        <div class="livraison-prix gratuit">Gratuit</div>
+      </div>
+      <div class="livraison-card">
+        <div class="livraison-emoji">🏍️</div>
+        <h3>Collecte domicile</h3>
+        <p>On vient chercher ta perruque chez toi entre 7h et 10h.</p>
+        <div class="livraison-prix">+1 500 FCFA</div>
+      </div>
+      <div class="livraison-card">
+        <div class="livraison-emoji">🚗</div>
+        <h3>Livraison domicile</h3>
+        <p>Ta perruque propre livrée chez toi entre 17h et 20h.</p>
+        <div class="livraison-prix">+2 000 FCFA</div>
+      </div>
+      <div class="livraison-card highlight">
+        <div class="livraison-emoji">✨</div>
+        <h3>Tout en un</h3>
+        <p>Collecte + Livraison. Tu ne bouges pas du tout , On s'occupe de tout.</p>
+        <div class="livraison-prix">+3 000 FCFA</div>
+      </div>
     </div>
+  </section>
 
-    <div class="livraison-card">
-      <div class="livraison-emoji">🚗</div>
-      <h3>Livraison domicile</h3>
-      <p>Ta perruque propre livrée chez toi entre 17h et 20h.</p>
-      <div class="livraison-prix">+2 000 FCFA</div>
-    </div>
-
-    <div class="livraison-card highlight">
-      <div class="livraison-emoji">✨</div>
-      <h3>Tout en un</h3>
-      <p>Collecte + Livraison. Tu ne bouges pas du tout. On s'occupe de tout </p>
-      <div class="livraison-prix">+3 000 FCFA</div>
-    </div>
-
-  </div>
-
-</section>
-  <!-- LES SERVICES -->
-<section id="services">
-
-  <h2>Nos services</h2>
-  <p class="sous-titre">Des soins professionnels pour ta perruque</p>
-
-  <div class="services-grid">
-
-    <div class="service-card">
-      <div class="service-emoji">🚿</div>
-      <h3>Lavage & Séchage</h3>
-      <p>Shampoing doux + séchage professionnel.</p>
-      <div class="prix">3 000 FCFA</div>
-      <div class="duree">⏱ 45 min</div>
-    </div>
-
-    <div class="service-card">
-      <div class="service-emoji">💧</div>
-      <h3>Hydratation & Soin</h3>
-      <p>Masque nourrissant + steamer capillaire professionnel.</p>
-      <div class="prix">5 500 FCFA</div>
-      <div class="duree">⏱ 60 min</div>
-    </div>
-
-    <div class="service-card">
-      <div class="service-emoji">✨</div>
-      <h3>Pack Complet Signature</h3>
-      <p>Lavage + Hydratation + Coiffage + soin huile brillance. Resultat garanti.</p>
-      <div class="prix">7 500 FCFA</div>
-      <div class="duree">⏱ 2h15 · ⭐ Populaire</div>
-    </div>
-
-  </div>
-
-</section>
 </body>
-
 </html>
